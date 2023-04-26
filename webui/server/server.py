@@ -23,7 +23,7 @@ HTTP_PORT = 5000
 thread_stop_event = threading.Event()
 
 # Amount of sensors.
-num_sensors = 4
+num_sensors = 40
 
 # Initialize sensor ids.
 sensor_numbers = range(num_sensors)
