@@ -287,6 +287,7 @@ def update_threshold(values, index):
   try:
     # Let the writer thread handle updating thresholds.
     threshold_cmd = '%d %d\n' % (sensor_numbers[index], values[index])
+    print(threshold_cmd)
     serial_handler.write_queue.put(threshold_cmd, block=False)
   except queue.Full:
     logger.error('Could not update thresholds. Queue full.')
